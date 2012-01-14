@@ -16,6 +16,6 @@ publish:
 	git checkout gh-pages \
 	  && git add . \
 	  && git commit -a \
-	  && git push
+	  && git push origin gh-pages
 
-.PHONY: docs docclean site
+.PHONY: docs docclean site publish
