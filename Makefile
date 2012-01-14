@@ -2,7 +2,7 @@ docs:
 	yard
 
 docclean:
-	rm -fr doc
+	rm -frv doc
 
 site:
 	rm -fr /tmp/doc \
@@ -12,4 +12,4 @@ site:
 	  && cp -fr /tmp/doc/* docs/yardoc  \
 	  && echo "done"
 
-.PHONY: docs site
+.PHONY: docs docclean site
