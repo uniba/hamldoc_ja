@@ -14,7 +14,7 @@ site:
 
 publish:
 	git checkout gh-pages \
-	  && git add .
+	  && git add . \
 	  && git commit -a \
 	  && git push
 
