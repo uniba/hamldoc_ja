@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Haml::Compiler
+  
+    &mdash; Haml Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../Haml.html" title="Haml (module)">Haml</a></span></span>
+     &raquo; 
+    <span class="title">Compiler</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Haml::Compiler
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+      <dt class="r1">Includes:</dt>
+      <dd class="r1"><span class='object_link'><a href="Util.html" title="Haml::Util (module)">Util</a></span></dd>
+      
+    
+  
+  
+    <dt class="r2">Included in:</dt>
+    <dd class="r2"><span class='object_link'><a href="Engine.html" title="Haml::Engine (class)">Engine</a></span></dd>
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/haml/compiler.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+
+
+  
+  
+  
+  
+  <h3 class="inherited">Constants included from <span class='object_link'><a href="Util.html" title="Haml::Util (module)">Util</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Util.html#RUBY_ENGINE-constant" title="Haml::Util::RUBY_ENGINE (constant)">RUBY_ENGINE</a></span>, <span class='object_link'><a href="Util.html#RUBY_VERSION-constant" title="Haml::Util::RUBY_VERSION (constant)">RUBY_VERSION</a></span></p>
+
+
+
+  
+  
+  
+
+
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Util.html" title="Haml::Util (module)">Util</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Util.html#abstract-instance_method" title="Haml::Util#abstract (method)">#abstract</a></span>, <span class='object_link'><a href="Util.html#ap_geq%3F-instance_method" title="Haml::Util#ap_geq? (method)">#ap_geq?</a></span>, <span class='object_link'><a href="Util.html#ap_geq_3%3F-instance_method" title="Haml::Util#ap_geq_3? (method)">#ap_geq_3?</a></span>, <span class='object_link'><a href="Util.html#assert_html_safe%21-instance_method" title="Haml::Util#assert_html_safe! (method)">#assert_html_safe!</a></span>, <span class='object_link'><a href="Util.html#av_template_class-instance_method" title="Haml::Util#av_template_class (method)">#av_template_class</a></span>, <span class='object_link'><a href="Util.html#caller_info-instance_method" title="Haml::Util#caller_info (method)">#caller_info</a></span>, <span class='object_link'><a href="Util.html#check_encoding-instance_method" title="Haml::Util#check_encoding (method)">#check_encoding</a></span>, <span class='object_link'><a href="Util.html#check_haml_encoding-instance_method" title="Haml::Util#check_haml_encoding (method)">#check_haml_encoding</a></span>, <span class='object_link'><a href="Util.html#def_static_method-instance_method" title="Haml::Util#def_static_method (method)">#def_static_method</a></span>, <span class='object_link'><a href="Util.html#dump-instance_method" title="Haml::Util#dump (method)">#dump</a></span>, <span class='object_link'><a href="Util.html#enum_cons-instance_method" title="Haml::Util#enum_cons (method)">#enum_cons</a></span>, <span class='object_link'><a href="Util.html#enum_slice-instance_method" title="Haml::Util#enum_slice (method)">#enum_slice</a></span>, <span class='object_link'><a href="Util.html#enum_with_index-instance_method" title="Haml::Util#enum_with_index (method)">#enum_with_index</a></span>, <span class='object_link'><a href="Util.html#flatten-instance_method" title="Haml::Util#flatten (method)">#flatten</a></span>, <span class='object_link'><a href="Util.html#haml_warn-instance_method" title="Haml::Util#haml_warn (method)">#haml_warn</a></span>, <span class='object_link'><a href="Util.html#has%3F-instance_method" title="Haml::Util#has? (method)">#has?</a></span>, <span class='object_link'><a href="Util.html#html_safe-instance_method" title="Haml::Util#html_safe (method)">#html_safe</a></span>, <span class='object_link'><a href="Util.html#inspect_obj-instance_method" title="Haml::Util#inspect_obj (method)">#inspect_obj</a></span>, <span class='object_link'><a href="Util.html#intersperse-instance_method" title="Haml::Util#intersperse (method)">#intersperse</a></span>, <span class='object_link'><a href="Util.html#ironruby%3F-instance_method" title="Haml::Util#ironruby? (method)">#ironruby?</a></span>, <span class='object_link'><a href="Util.html#lcs-instance_method" title="Haml::Util#lcs (method)">#lcs</a></span>, <span class='object_link'><a href="Util.html#load-instance_method" title="Haml::Util#load (method)">#load</a></span>, <span class='object_link'><a href="Util.html#map_hash-instance_method" title="Haml::Util#map_hash (method)">#map_hash</a></span>, <span class='object_link'><a href="Util.html#map_keys-instance_method" title="Haml::Util#map_keys (method)">#map_keys</a></span>, <span class='object_link'><a href="Util.html#map_vals-instance_method" title="Haml::Util#map_vals (method)">#map_vals</a></span>, <span class='object_link'><a href="Util.html#merge_adjacent_strings-instance_method" title="Haml::Util#merge_adjacent_strings (method)">#merge_adjacent_strings</a></span>, <span class='object_link'><a href="Util.html#ord-instance_method" title="Haml::Util#ord (method)">#ord</a></span>, <span class='object_link'><a href="Util.html#paths-instance_method" title="Haml::Util#paths (method)">#paths</a></span>, <span class='object_link'><a href="Util.html#powerset-instance_method" title="Haml::Util#powerset (method)">#powerset</a></span>, <span class='object_link'><a href="Util.html#rails_env-instance_method" title="Haml::Util#rails_env (method)">#rails_env</a></span>, <span class='object_link'><a href="Util.html#rails_root-instance_method" title="Haml::Util#rails_root (method)">#rails_root</a></span>, <span class='object_link'><a href="Util.html#rails_safe_buffer_class-instance_method" title="Haml::Util#rails_safe_buffer_class (method)">#rails_safe_buffer_class</a></span>, <span class='object_link'><a href="Util.html#rails_xss_safe%3F-instance_method" title="Haml::Util#rails_xss_safe? (method)">#rails_xss_safe?</a></span>, <span class='object_link'><a href="Util.html#restrict-instance_method" title="Haml::Util#restrict (method)">#restrict</a></span>, <span class='object_link'><a href="Util.html#ruby1_8%3F-instance_method" title="Haml::Util#ruby1_8? (method)">#ruby1_8?</a></span>, <span class='object_link'><a href="Util.html#ruby1_8_6%3F-instance_method" title="Haml::Util#ruby1_8_6? (method)">#ruby1_8_6?</a></span>, <span class='object_link'><a href="Util.html#scope-instance_method" title="Haml::Util#scope (method)">#scope</a></span>, <span class='object_link'><a href="Util.html#set_eql%3F-instance_method" title="Haml::Util#set_eql? (method)">#set_eql?</a></span>, <span class='object_link'><a href="Util.html#set_hash-instance_method" title="Haml::Util#set_hash (method)">#set_hash</a></span>, <span class='object_link'><a href="Util.html#silence_haml_warnings-instance_method" title="Haml::Util#silence_haml_warnings (method)">#silence_haml_warnings</a></span>, <span class='object_link'><a href="Util.html#silence_warnings-instance_method" title="Haml::Util#silence_warnings (method)">#silence_warnings</a></span>, <span class='object_link'><a href="Util.html#static_method_name-instance_method" title="Haml::Util#static_method_name (method)">#static_method_name</a></span>, <span class='object_link'><a href="Util.html#strip_string_array-instance_method" title="Haml::Util#strip_string_array (method)">#strip_string_array</a></span>, <span class='object_link'><a href="Util.html#substitute-instance_method" title="Haml::Util#substitute (method)">#substitute</a></span>, <span class='object_link'><a href="Util.html#to_hash-instance_method" title="Haml::Util#to_hash (method)">#to_hash</a></span>, <span class='object_link'><a href="Util.html#try_sass-instance_method" title="Haml::Util#try_sass (method)">#try_sass</a></span>, <span class='object_link'><a href="Util.html#version_geq-instance_method" title="Haml::Util#version_geq (method)">#version_geq</a></span>, <span class='object_link'><a href="Util.html#version_gt-instance_method" title="Haml::Util#version_gt (method)">#version_gt</a></span>, <span class='object_link'><a href="Util.html#windows%3F-instance_method" title="Haml::Util#windows? (method)">#windows?</a></span></p>
+
+
+</div>
+    
+    <div id="footer">
+  Generated on Sat Jan 14 22:49:53 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
