@@ -22,6 +22,7 @@ publish:
 	git checkout gh-pages \
 	  && git add . \
 	  && git commit -a \
-	  && git push origin gh-pages
+	  && git push origin gh-pages \
+	  && open http://uniba.jp/hamldoc_ja/docs/yard
 
 .PHONY: docs docclean site publish
