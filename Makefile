@@ -1,5 +1,6 @@
 me-translator:
-	git remote add upstream https://github.com/nex3/haml.git \
+	git fetch origin \
+	  && git remote add upstream https://github.com/nex3/haml.git \
 	  && echo "To merge from upstream:" \
 	  && echo "$$ git pull upstream master"
 
