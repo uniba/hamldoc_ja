@@ -12,4 +12,10 @@ site:
 	  && cp -fr /tmp/doc/* docs/yardoc  \
 	  && echo "done"
 
+publish:
+	git checkout gh-pages \
+	  && git add .
+	  && git commit -a \
+	  && git push
+
 .PHONY: docs docclean site
