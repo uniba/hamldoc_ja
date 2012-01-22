@@ -54,76 +54,125 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><p>&#171;&#171;&lt;&#171;&#160;HEAD</p>
+    <div id="content"><div id='filecontents'><h1 id='haml'>Haml</h1>
+<!--
+Haml is a templating engine for HTML.
+It's are designed to make it both easier and more pleasant
+to write HTML documents,
+by eliminating redundancy,
+reflecting the underlying structure that the document represents,
+and providing elegant, easily understandable, and powerful syntax.
+-->
+<p>HamlはHTMLのためのテンプレートエンジンです。HTMLをより簡単に、楽しく書くために設計されており、冗長性を排し、文書の構造を反映した記述ができます。また、エレガントですぐに習得できる強力な文法を提供します。</p>
 
-<h1 id='haml_'>Hamlドキュメント 日本語訳</h1>
-
-<h1 id='haml'>Hamlドキュメントを日本語訳するプロジェクトです。</h1>
-
-<h1 id='haml'>Haml</h1>
-
-<p>Haml is a templating engine for HTML. It&#8217;s are designed to make it both easier and more pleasant to write HTML documents, by eliminating redundancy, reflecting the underlying structure that the document represents, and providing elegant, easily understandable, and powerful syntax.</p>
-
-<h2 id='using'>Using</h2>
-
-<p>Haml can be used from the command line or as part of a Ruby web framework. The first step is to install the gem:</p>
+<h2 id='id5'>使用方法</h2>
+<!--
+Haml can be used from the command line
+or as part of a Ruby web framework.
+The first step is to install the gem:
+-->
+<p>Hamlはコマンドラインからも使用することも、またRubyのフレームワークの一部として利用することもできます。</p>
 
 <pre class="code">gem install haml</pre>
-
-<p>After you convert some HTML to Haml, you can run</p>
+<!--
+After you convert some HTML to Haml, you can run
+-->
+<p>HTMLをHamlで書き終えたら、以下のコマンドでコンパイルすることができます。</p>
 
 <pre class="code">haml document.haml</pre>
-
-<p>to compile them. For more information on these commands, check out</p>
+<!--
+to compile them.
+For more information on these commands, check out
+-->
+<p>より詳しい情報を知りたい方は、以下のコマンドで確認して下さい。</p>
 
 <pre class="code">haml --help</pre>
+<!--
+To install Haml in Rails 2,
+just add `config.gem "haml"` to `config/environment.rb`.
+In Rails 3, add `gem "haml"` to your Gemfile instead.
+and both Haml and Sass will be installed.
+Views with the `.html.haml` extension will automatically use Haml.
+-->
+<p>Rails2でHamlを利用したい場合は、<code>config/environment.rb</code>に<code>config.gem &quot;haml&quot;</code>を書き加えます。Rail3の場合は<code>Gemfile</code>に<code>gem &quot;haml&quot;</code>を追加します。これでHamlとSassの両方がインストールされます。拡張子<code>.html.haml</code>のviewファイルは自動的にHamlとして解釈されます。</p>
+<!--
+To use Haml programatically,
+check out the [YARD documentation](http://haml-lang.com/docs/yardoc/).
+-->
+<p>プログラムの一部としてHamlを利用したい場合は、<a href='http://haml-lang.com/docs/yardoc/'>YARD documentation</a>をご覧下さい。</p>
 
-<p>To install Haml in Rails 2, just add <code>config.gem &quot;haml&quot;</code> to <code>config/environment.rb</code>. In Rails 3, add <code>gem &quot;haml&quot;</code> to your Gemfile instead. and both Haml and Sass will be installed. Views with the <code>.html.haml</code> extension will automatically use Haml.</p>
-
-<p>To use Haml programatically, check out the <a href='http://haml-lang.com/docs/yardoc/'>YARD documentation</a>.</p>
-
-<h2 id='formatting'>Formatting</h2>
-
-<p>The most basic element of Haml is a shorthand for creating HTML:</p>
+<h2 id='id6'>フォーマット</h2>
+<!--
+The most basic element of Haml
+is a shorthand for creating HTML:
+-->
+<p>Hamlの最も基本的な文法は、HTMLを手早く生成するためのものです。</p>
 
 <pre class="code">%tagname{:attr1 =&gt; &#39;value1&#39;, :attr2 =&gt; &#39;value2&#39;} Contents</pre>
-
-<p>No end-tag is needed; Haml handles that automatically. If you prefer HTML-style attributes, you can also use:</p>
+<!--
+No end-tag is needed; Haml handles that automatically.
+If you prefer HTML-style attributes, you can also use:
+-->
+<p>終了タグは不要です。Hamlが自動的にうまくやってくれるからです。もしHTMLに近いスタイルの方が好きでしたら、属性部分を以下のように書くこともできます。</p>
 
 <pre class="code">%tagname(attr1=&#39;value1&#39; attr2=&#39;value2&#39;) Contents</pre>
-
-<p>Adding <code>class</code> and <code>id</code> attributes is even easier. Haml uses the same syntax as the CSS that styles the document:</p>
+<!--
+Adding `class` and `id` attributes is even easier.
+Haml uses the same syntax as the CSS that styles the document:
+-->
+<p><code>class</code>や<code>id</code>はもっと簡単に書くこともできます。CSSで文書のスタイルを指定するときと同じ文法を使うことができるからです。</p>
 
 <pre class="code">%tagname#id.class</pre>
-
-<p>In fact, when you&#8217;re using the <code>&lt;div&gt;</code> tag, it becomes <em>even easier</em>. Because <code>&lt;div&gt;</code> is such a common element, a tag without a name defaults to a div. So</p>
+<!--
+In fact, when you're using the `<div>` tag,
+it becomes _even easier_.
+Because `<div>` is such a common element,
+a tag without a name defaults to a div. So
+-->
+<p>実は<code>&lt;div&gt;</code>タグを使う場合はさらに簡単にするこたおができます。<code>&lt;div&gt;</code>タグは頻繁に用いられるので、名前を指定しないタグはデフォルトでdivになります。</p>
 
 <pre class="code">#foo Hello!</pre>
-
-<p>becomes</p>
+<!--
+becomes
+-->
+<p>と書くと、以下のようにコンパイルされます。</p>
 
 <pre class="code">&lt;div id=&#39;foo&#39;&gt;Hello!&lt;/div&gt;</pre>
-
-<p>Haml uses indentation to bring the individual elements to represent the HTML structure. A tag&#8217;s children are indented beneath than the parent tag. Again, a closing tag is automatically added. For example:</p>
+<!--
+Haml uses indentation
+to bring the individual elements to represent the HTML structure.
+A tag's children are indented beneath than the parent tag.
+Again, a closing tag is automatically added.
+For example:
+-->
+<p>Hamlはインデントを使って、個々の要素をHTMLとして構造化します。ある要素の子要素は、親要素よりも深くインデントされます。改めて確認しておきますが、終了タグは自動的に挿入されます。</p>
 
 <pre class="code">%ul
   %li Salt
   %li Pepper</pre>
 
-<p>becomes:</p>
+<p>と書くと、以下のようにコンパイルされます。</p>
 
 <pre class="code">&lt;ul&gt;
   &lt;li&gt;Salt&lt;/li&gt;
   &lt;li&gt;Pepper&lt;/li&gt;
 &lt;/ul&gt;</pre>
-
-<p>You can also put plain text as a child of an element:</p>
+<!--
+You can also put plain text as a child of an element:
+-->
+<p>プレーンテキストをどのまま子要素にすることもできます。</p>
 
 <pre class="code">%p
   Hello,
   World!</pre>
-
-<p>It&#8217;s also possible to embed Ruby code into Haml documents. An equals sign, <code>=</code>, will output the result of the code. A hyphen, <code>-</code>, will run the code but not output the result. You can even use control statements like <code>if</code> and <code>while</code>:</p>
+<!--
+It's also possible to embed Ruby code into Haml documents.
+An equals sign, `=`, will output the result of the code.
+A hyphen, `-`, will run the code but not output the result.
+You can even use control statements
+like `if` and `while`:
+-->
+<p>Hamlで書かれたドキュメントの中にRubyのコードを埋め込むこともできます。等号記号<code>=</code>を書くと、コードを評価した結果が出力されます。ハイフン<code>-</code>はコードを評価しますが、その結果は出力されません。<code>if</code>文や<code>while</code>文を使うこともできます。</p>
 
 <pre class="code">%p
   Date/Time:
@@ -131,43 +180,50 @@
   %strong= now
   - if now &gt; DateTime.parse(&quot;December 31, 2006&quot;)
     = &quot;Happy new &quot; + &quot;year!&quot;</pre>
+<!--
+Haml provides far more tools than those presented here.
+Check out the [reference documentation](http://beta.haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html)
+for full details.
+-->
+<p>Hamlはここに書いたことよりもはるかに多くの機能を提供します。詳しくは<a href='http://beta.haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html'>reference documentation</a>を御覧下さい。</p>
 
-<p>Haml provides far more tools than those presented here. Check out the <a href='http://beta.haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html'>reference documentation</a> for full details.</p>
+<h3 id='id7'>インデント</h3>
+<!--
+Haml's indentation can be made up of one or more tabs or spaces.
+However, indentation must be consistent within a given document.
+Hard tabs and spaces can't be mixed,
+and the same number of tabs or spaces must be used throughout.
+-->
+<p>Hamlのインデントには1つ以上のタブかスペースです。ただし、インデントはドキュメントの中で一貫している必要があります。タブとスペースが混在させることができませんし、タブやスペースの数も揃っていなければなりません。</p>
 
-<h3 id='indentation'>Indentation</h3>
-
-<p>Haml&#8217;s indentation can be made up of one or more tabs or spaces. However, indentation must be consistent within a given document. Hard tabs and spaces can&#8217;t be mixed, and the same number of tabs or spaces must be used throughout.</p>
-
-<h2 id='authors'>Authors</h2>
-
-<p>Haml was created by <a href='http://hamptoncatlin.com'>Hampton Catlin</a> (hcatlin) and he is the author of the original implementation. However, Hampton doesn&#8217;t even know his way around the code anymore and now occasionally consults on the language issues. Hampton lives in Jacksonville, Florida and is the lead mobile developer for Wikimedia.</p>
-
-<p><a href='http://nex-3.com'>Nathan Weizenbaum</a> is the primary developer and architect of the &#8220;modern&#8221; Ruby implementation of Haml. His hard work has kept the project alive by endlessly answering forum posts, fixing bugs, refactoring, finding speed improvements, writing documentation, implementing new features, and getting Hampton coffee (a fitting task for a boy-genius). Nathan lives in Seattle, Washington and while not being a student at the University of Washington or working at an internship, he consults for Unspace Interactive.</p>
+<h2 id='id8'>作者</h2>
+<!--
+Haml was created by [Hampton Catlin](http://hamptoncatlin.com)
+(hcatlin) and he is the author of the original implementation. However, Hampton
+doesn't even know his way around the code anymore and now occasionally consults
+on the language issues.  Hampton lives in Jacksonville, Florida and is the lead
+mobile developer for Wikimedia.
+-->
+<p>Hamlを最初に実装したのは<a href='http://hamptoncatlin.com'>Hampton Catlin</a>(hcatlin)ですが、彼は関与することはなくなっていて、今は時折相談に乗る程度です。Hamptonはフロリダ州のジャクソンビル在住の、Wikimedia財団に所属する上級モバイル開発者です。</p>
+<!--
+[Nathan Weizenbaum](http://nex-3.com) is the primary developer and architect of
+the "modern" Ruby implementation of Haml. His hard work has kept the project
+alive by endlessly answering forum posts, fixing bugs, refactoring, finding
+speed improvements, writing documentation, implementing new features, and
+getting Hampton coffee (a fitting task for a boy-genius). Nathan lives in
+Seattle, Washington and while not being a student at the University of
+Washington or working at an internship, he consults for Unspace Interactive.
+-->
+<p><a href='http://nex-3.com'>Nathan Weizenbaum</a>は、Hamlの「モダン」なRuby実装を設計した主要な開発者です。フォーラムに次から次への投稿される質問に答えたり、バグを修正したり、リファクタリングをしたり、高速化の手法を見つけたり、ドキュメントを書いたり、新機能を実装したり、<a href='http://www.hamptoncoffee.com/Hampton_Coffee_Company/Hampton_Coffee_Company_Espresso_Bars,_Cafes,_%26_Coffee_Roastery.html'>ハンプトン・コーヒー</a>を飲んだり（これは天才にはうってつけの仕事です）、彼の奮闘はプロジェクトを支えています。Nathan lives in Seattle, Washington and while not being a student at the University of Washington or working at an internship, he consults for Unspace Interactive.</p>
 
 <p>If you use this software, you must pay Hampton a compliment. And buy Nathan some jelly beans. Maybe pet a kitten. Yeah. Pet that kitty.</p>
 
 <p>Some of the work on Haml was supported by Unspace Interactive.</p>
 
-<p>Beyond that, the implementation is licensed under the MIT License. Okay, fine, I guess that means compliments aren&#8217;t <strong>required</strong>.</p>
-
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>630b8fe2033e698768a67a923960a14e1d02100f</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote></div></div>
+<p>Beyond that, the implementation is licensed under the MIT License. Okay, fine, I guess that means compliments aren&#8217;t <strong>required</strong>.</p></div></div>
     
     <div id="footer">
-  Generated on Sat Jan 14 22:49:48 2012 by 
+  Generated on Sun Jan 22 23:53:38 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.8.7).
 </div>
