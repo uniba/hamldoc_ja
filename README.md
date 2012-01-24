@@ -194,13 +194,24 @@ Seattle, Washington and while not being a student at the University of
 Washington or working at an internship, he consults for Unspace Interactive.
 -->
 
-[Nathan Weizenbaum](http://nex-3.com)は、Hamlの「モダン」なRuby実装を設計した主要な開発者です。フォーラムに次から次への投稿される質問に答えたり、バグを修正したり、リファクタリングをしたり、高速化の手法を見つけたり、ドキュメントを書いたり、新機能を実装したり、[ハンプトン・コーヒー](http://www.hamptoncoffee.com/Hampton_Coffee_Company/Hampton_Coffee_Company_Espresso_Bars,_Cafes,_%26_Coffee_Roastery.html)を飲んだり（これは天才にはうってつけの仕事です）、彼の奮闘はプロジェクトを支えています。Nathan lives in Seattle, Washington and while not being a student at the University of Washington or working at an internship, he consults for Unspace Interactive.
+[Nathan Weizenbaum](http://nex-3.com)は、Hamlの「モダン」なRuby実装を設計した主要な開発者です。フォーラムに次から次への投稿される質問に答えたり、バグを修正したり、リファクタリングをしたり、高速化の手法を見つけたり、ドキュメントを書いたり、新機能を実装したり、[ハンプトン・コーヒー](http://www.hamptoncoffee.com/Hampton_Coffee_Company/Hampton_Coffee_Company_Espresso_Bars,_Cafes,_%26_Coffee_Roastery.html)を飲んだり（これは天才にはうってつけの仕事です）、彼の奮闘はプロジェクトを支えています。ネイサンはワシントン州シアトルに住んでおり、ワシントン大学の学生でもインターンでもないのですが、Unspace Interactive社でコンサルタントとして働いています。
 
+<!--
 If you use this software, you must pay Hampton a compliment. And
 buy Nathan some jelly beans. Maybe pet a kitten. Yeah. Pet that kitty.
+-->
 
+このソフトウェアを利用するには、ハンプトンにお礼を述べた上で、ネイサンにジェリービーンズを買ってやる必要があります。あるいはペットのネコの相手をしてあげるのでも構いません。
+
+<!--
 Some of the work on Haml was supported by Unspace Interactive.
+-->
 
+Hamlの一部はUnscpae Interactive社の助けを受けて制作されました。
+
+<!--
 Beyond that, the implementation is licensed under the MIT License.
 Okay, fine, I guess that means compliments aren't __required__.
+-->
 
+あと、このHaml実装はMITライセンスのもとで公開されています。だから実を言うと、利用の際にわざわざ作者に声をかけなくても大丈夫（でも、一言くらいは欲しいかも）。
