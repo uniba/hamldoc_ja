@@ -5,7 +5,7 @@ me-translator:
 	  && echo "$$ git pull upstream master"
 
 docs:
-	yard
+	rake doc
 
 docclean:
 	rm -frv doc
